@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <style>
+        .darkness {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+        
+        .light {
+            background-color: lemonchiffon;
+            color: blue;
+            font-family: sans-serif;
+        }
+        
+    </style>
+    
+    <title>Bulbs</title>
+</head>
+<body id="mainContent" class="darkness">
+    <img id="lightBulb" src="img/bulboff.gif" width="150px">
+    <div>
+        <button onClick="bulbon()">Lights on!</button>
+        <button onClick="bulboff()">Lights off!</button>
+    </div>
+    <div id="status"></div>
+    
+    <script>
+        let myBackground = document.getElementById("mainContent");
+    
+        function bulbon() {
+            document.getElementById("lightBulb").src="img/bulbon.gif"
+            
+            document.getElementById("status").innerHTML = "<h2>It's too bright!!</h2>";
+            
+            myBackground.classList.remove("darkness"); //gets the class list and removes the class "darkness".
+            myBackground.classList.add("light"); //gets the class list adn adds teh class "light".
+        }
+        
+         function bulboff() {
+            document.getElementById("lightBulb").src="img/bulboff.gif"
+            
+            document.getElementById("status").innerHTML = "<h2>It's too dark!!</h2>";
+            
+            myBackground.classList.remove("light"); //gets the class list and removes the class "light".
+            myBackground.classList.add("darkness"); //gets the class list adn adds teh class "darkness".
+        }
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>greeting2</title>
+</head>
+<body>
+    <input type="text" id="inputBox" placeholder="Enter your name">
+    <button onClick = "greeting()">Submit</button>
+    <div id="greetingText"></div>
+    
+    <script>
+        function greeting() {
+            
+            let nameInput = document.getElementById("inputBox");
+            let nameValue = nameInput.value;
+            
+            //can also be written like this; document.getElementByID("inputBox").value;
+            
+            document.getElementById("greetingText").innerHTML = "<h2>Hi there " + nameValue + "!</h2>";
+        }
+        
+    </script>
+    
+</body>
+</html>

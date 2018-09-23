@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body>
+    
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    
+    <button onClick = "popup()">Submit</button>
+    
+    <script>
+        function popup() {
+            let inputBox = document.getElementById("nameInput"); //the variable inputBox is going to look through the document object with ID nameInput and store the OBJECT.
+            let nameValue = inputBox.value; //the variable nameValue is going to store the VALUE of the object. Just to be confusing, in this case VALUE is the key/propoerty, the 'value' of the object is the typed entry (i.e. your name).
+            
+            alert("Hi there " + nameValue);
+        }
+    </script>
+</body>
+</html>
