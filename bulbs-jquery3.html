@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        
+        #mainContent {
+            background-color: lemonchiffon;
+        }
+        
+        h1 {
+            font-family: sans-serif;
+        }
+        
+        #switch {
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+        
+        #switch2 {
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+        
+        #switch3 {
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+    </style>
+
+    <title>Bulbs-jQuery3</title>
+</head>
+
+<body id="mainContent">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1>Bulb 1</h1>
+                <img id="lightBulb" src="img/bulboff.gif" width="150px">
+                
+                <div>
+                    <img id="switch" src="img/switch_off.png" width="100px">
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Bulb 2</h1>
+                 <img id="lightBulb2" src="img/bulboff.gif" width="150px">
+                
+                <div>
+                    <img id="switch2" src="img/switch_off.png" width="100px">
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Bulb 3</h1>
+                 <img id="lightBulb3" src="img/bulboff.gif" width="150px">
+                
+                <div>
+                    <img id="switch3" src="img/switch_off.png" width="100px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $("#switch").click(function() {
+            if($("#switch").attr("src") == "img/switch_off.png") {
+                $("#switch").attr("src", "img/switch_on.png");
+                bulbon();
+            }
+            else {
+                $("#switch").attr("src", "img/switch_off.png");
+                bulboff();
+            }
+        });
+
+        function bulbon() {
+            $("#lightBulb").attr("src", "img/bulbon.gif");
+        }
+
+        function bulboff() {
+            $("#lightBulb").attr("src", "img/bulboff.gif");
+        }
+        
+        
+        $("#switch2").click(function() {
+            if($("#switch2").attr("src") == "img/switch_off.png") {
+                $("#switch2").attr("src", "img/switch_on.png");
+                bulbon2();
+            }
+            else {
+                $("#switch2").attr("src", "img/switch_off.png");
+                bulboff2();
+            }
+        });
+
+        function bulbon2() {
+            $("#lightBulb2").attr("src", "img/bulbon.gif");
+        }
+
+        function bulboff2() {
+            $("#lightBulb2").attr("src", "img/bulboff.gif");
+        }
+        
+        
+        $("#switch3").click(function() {
+            if($("#switch3").attr("src") == "img/switch_off.png") {
+                $("#switch3").attr("src", "img/switch_on.png");
+                bulbon3();
+            }
+            else {
+                $("#switch3").attr("src", "img/switch_off.png");
+                bulboff3();
+            }
+        });
+
+        function bulbon3() {
+            $("#lightBulb3").attr("src", "img/bulbon.gif");
+        }
+
+        function bulboff3() {
+            $("#lightBulb3").attr("src", "img/bulboff.gif");
+        }
+        
+    </script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .darkness {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .light {
+            background-color: lemonchiffon;
+            color: blue;
+            font-family: sans-serif;
+        }
+        
+        #switch {
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+    </style>
+
+    <title>Bulbs-jQuery2</title>
+</head>
+
+<body id="mainContent" class="darkness">
+    <img id="lightBulb" src="img/bulboff.gif" width="150px">
+    <!--<div>-->
+    <!--    <button onClick="bulbon()">Lights on!</button>-->
+    <!--    <button onClick="bulboff()">Lights off!</button>-->
+    <!--</div>-->
+    <div>
+        <img id="switch" src="img/switch_off.png" width="100px">
+    </div>
+    <div id="status"></div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+        $("#switch").click(function() {
+            if($("#switch").attr("src") == "img/switch_off.png") {
+                $("#switch").attr("src", "img/switch_on.png");
+                bulbon();
+            }
+            else {
+                $("#switch").attr("src", "img/switch_off.png");
+                bulboff();
+            }
+        });
+
+        function bulbon() {
+            $("#lightBulb").attr("src", "img/bulbon.gif");
+
+            $("#status").html("<h2>It's too bright!!</h2>");
+
+            $("#mainContent").removeClass("darkness").addClass("light"); //gets the class list and removes the class "darkness" and adds the class "light".
+        }
+
+        function bulboff() {
+            $("#lightBulb").attr("src", "img/bulboff.gif");
+
+            $("#status").html("<h2>It's too dark!!</h2>");
+
+            $("#mainContent").removeClass("light").addClass("darkness"); //gets the class list and removes the class "light" and adds the class "darkness".
+        }
+    </script>
+
+    
+
+</body>
+
+</html>
